@@ -24,6 +24,7 @@ namespace RecordAudio
             //test
             Console.Out.WriteLine(outputFolder);
             Directory.CreateDirectory(outputFolder);
+            // 直接将.wave改成mp3就可以成功输出Mp3，NAudio也是屌
             var fileName = DateTime.Now.ToString("yyyy-MM-dd HH.mm.ss") + "-Record.wav";
             var outputFilePath = Path.Combine(outputFolder, fileName);
             capture = new WasapiLoopbackCapture();
